@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# Clone GCC
+if [ ! -d GCC ]; then
+git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 -b android-10.0.0_r41 --depth=1 64
+git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9 -b android-10.0.0_r41 --depth=1 32
+fi
+
+# Clone AnyKernel3
+if [ ! -d AnyKernel3 ]; then
+    git clone -b AOSP-onclite https://github.com/sxlmnwb/AnyKernel3
+fi
+
+#Download clang
+if [ ! -d clang ]; then
+    wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r416183b.tar.gz
+    mkdir -p LLVM-Prebuilts
+    tar xvzf clang-r416183b.tar.gz -C LLVM-Prebuilts
+    rm clang-r416183b.tar.gz
+fi
+
+# Download libufdt
+if [ ! -d libufdt ]; then
+    wget https://android.googlesource.com/platform/system/libufdt/+archive/refs/tags/android-10.0.0_r41/utils.tar.gz
+    mkdir -p libufdt
+    tar xvzf utils.tar.gz -C libufdt
+    rm utils.tar.gz
+fi
+
+# End
