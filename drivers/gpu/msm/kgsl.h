@@ -225,11 +225,12 @@ struct kgsl_memdesc {
 	struct page **pages;
 	unsigned int page_count;
 	unsigned int cur_bindings;
+	struct file *shmem_filp;
 	/*
-	 * @lock: Spinlock to protect the gpuaddr from being accessed by
+	 * @gpuaddr_lock: Spinlock to protect the gpuaddr from being accessed by
 	 * multiple entities trying to map the same SVM region at once
 	 */
-	spinlock_t lock;
+	spinlock_t gpuaddr_lock;
 };
 
 /*
@@ -278,7 +279,7 @@ struct kgsl_mem_entry {
 	struct work_struct work;
 	spinlock_t bind_lock;
 	struct rb_root bind_tree;
-	/*
+	/**
 	 * @map_count: Count how many vmas this object is mapped in - used for
 	 * debugfs accounting
 	 */
