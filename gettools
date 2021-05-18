@@ -2,8 +2,8 @@
 
 # Clone GCC
 if [ ! -d GCC ]; then
-git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 -b android-10.0.0_r41 --depth=1 64
-git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9 -b android-10.0.0_r41 --depth=1 32
+    git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 -b android-10.0.0_r41 --depth=1 64
+    git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9 -b android-10.0.0_r41 --depth=1 32
 fi
 
 # Clone AnyKernel3
@@ -17,6 +17,7 @@ if [ ! -d clang ]; then
     mkdir -p LLVM-Prebuilts
     tar xvzf clang-r416183b.tar.gz -C LLVM-Prebuilts
     rm clang-r416183b.tar.gz
+#   git clone https://github.com/kdrag0n/proton-clang --depth=1 proton-clang
 fi
 
 # Download libufdt
