@@ -19,7 +19,7 @@ make clean && make mrproper
 KERNEL_DIR=$PWD
 KERN_IMG=$KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb
 ZIP_DIR=$KERNEL_DIR/AnyKernel3
-CONFIG=onclite_defconfig
+CONFIG=xBoreUp-onclite_defconfig
 CROSS_COMPILE="aarch64-linux-gnu-"
 CROSS_COMPILE_ARM32="arm-linux-gnueabi-"
 PATH=:"${KERNEL_DIR}/LLVM-Prebuilts/bin:${PATH}:${KERNEL_DIR}/64/bin:${PATH}:${KERNEL_DIR}/32/bin:${PATH}"
