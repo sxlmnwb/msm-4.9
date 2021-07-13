@@ -13,11 +13,12 @@ fi
 
 #Download clang
 if [ ! -d clang ]; then
-    wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r416183d.tar.gz
+    wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r416183b1.tar.gz
     mkdir -p LLVM-Prebuilts
-    tar xvzf clang-r416183d.tar.gz -C LLVM-Prebuilts
-    rm clang-r416183d.tar.gz
+    tar xvzf clang-r416183b1.tar.gz -C LLVM-Prebuilts
+    rm clang-r416183b1.tar.gz
 #   git clone https://github.com/kdrag0n/proton-clang --depth=1 proton-clang
+#   git clone https://github.com/sxlmnwb/sxlzptprjkt-clang --depth=1 sxlzptprjkt-clang
 fi
 
 # Download libufdt
