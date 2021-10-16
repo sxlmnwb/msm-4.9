@@ -13,10 +13,10 @@ fi
 
 #Download clang
 if [ ! -d clang ]; then
-    wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r428724.tar.gz
+    wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r433403b.tar.gz
     mkdir -p LLVM-Prebuilts
-    tar xvzf clang-r428724.tar.gz -C LLVM-Prebuilts
-    rm clang-r428724.tar.gz
+    tar xvzf clang-r433403b.tar.gz -C LLVM-Prebuilts
+    rm clang-r433403b.tar.gz
 #   git clone https://github.com/kdrag0n/proton-clang --depth=1 proton-clang
 #   git clone https://github.com/sxlmnwb/sxlzptprjkt-clang --depth=1 sxlzptprjkt-clang
 fi
